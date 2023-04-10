@@ -1,0 +1,27 @@
+body {
+    background-color: #f5f5f5;
+  }
+  .flag-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+  }
+  .flag-pole {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 150px;
+    background-color: #333;
+  }
+  .flag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40
+  
