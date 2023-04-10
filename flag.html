@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Afghanistan Flag Animation</title>
+    < link rel="stylesheet" type="text/css" href="flagg.css">
+    <style>
+      body {
+        background-color: #f5f5f5;
+      }
+      .flag-container {
+        position: relative;
+        width: 400px;
+        height: 300px;
+      }
+      .flag-pole {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 150px;
+        background-color: #333;
+      }
+      .flag {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 200px;
+        background-color: black;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
+        animation: fly-flag 3s linear infinite;
+      }
+      .flag:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #00a1de;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
+      }
+      .flag:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #f2a900;
+        clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 40% 100%);
+      }
+      @keyframes fly-flag {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+        }
+        25% {
+          transform: translate(-50%, -50%) rotate(10deg) translateY(-25px);
+        }
+        50% {
+          transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+        }
+        75% {
+          transform: translate(-50%, -50%) rotate(-10deg) translateY(25px);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(0deg) translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flag-container">
+      <div class="flag-pole"></div>
+      <div class="flag"></div>
+    </div>
+  </body>
+</html>
